@@ -111,7 +111,7 @@ BOARD_USES_UBOOT := true
 BOARD_USES_UBOOT_MULTIIMAGE := true
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := tenderloin_android_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_tenderloin_defconfig
 
 
 # Define Prebuilt kernel locations
