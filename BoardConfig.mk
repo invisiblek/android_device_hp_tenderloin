@@ -110,24 +110,12 @@ TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/hp/tenderloin/releasetools/t
 BOARD_USES_UBOOT := true
 BOARD_USES_UBOOT_MULTIIMAGE := true
 
-# Define kernel config for inline building
-TARGET_KERNEL_CONFIG := cyanogenmod_tenderloin_defconfig
-
-
 # Define Prebuilt kernel locations
 TARGET_PREBUILT_KERNEL := device/hp/tenderloin/prebuilt/boot/kernel
 
-# kernel
-BUILD_KERNEL := true
+# Kernel
 TARGET_KERNEL_SOURCE := kernel/hp/tenderloin
-EXTRA_MODULES:
-	$(MAKE) -C external/backports-wireless defconfig-ath6kl
-	export CROSS_COMPILE=$(ARM_EABI_TOOLCHAIN)/arm-eabi-; $(MAKE) -C external/backports-wireless KLIB=$(KERNEL_SRC) KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
-	cp `find external/backports-wireless -name *.ko` $(KERNEL_MODULES_OUT)/
-	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
-	$(MAKE) -C external/backports-wireless clean
-
-TARGET_KERNEL_MODULES := EXTRA_MODULES
+TARGET_KERNEL_CONFIG := cyanogenmod_tenderloin_defconfig
 
 TARGET_RECOVERY_INITRC := device/hp/tenderloin/recovery/init.rc
 
