@@ -13,6 +13,9 @@ wifi.interface=wlan0
 debug.fb.rgb565 = 0
 debug.sf.hw=1
 debug.enabletr=false
+debug.egl.hw=1
+debug.egl.recordable.rgba8888=1
+debug.composition.type=dyn
 
 #multi user support
 fw.max_users = 5
