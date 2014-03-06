@@ -5665,7 +5665,7 @@ status_t QualcommCameraHardware::setJpegQuality(const CameraParameters& params) 
     status_t rc = NO_ERROR;
     ALOGV("%s E", __FUNCTION__);
     int quality = params.getInt(CameraParameters::KEY_JPEG_QUALITY);
-    if (quality > 0 && quality <= 100) {
+    if (quality >= 0 && quality <= 100) {
         mParameters.set(CameraParameters::KEY_JPEG_QUALITY, quality);
     } else {
         ALOGE("Invalid jpeg quality=%d", quality);
