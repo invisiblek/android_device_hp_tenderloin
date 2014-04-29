@@ -20,7 +20,7 @@ fw.max_users = 5
 com.qc.hardware=true
 
 #c2d
-#debug.composition.type=cpu
+debug.composition.type=c2d
 #ro.sf.compbypass.enable=1
 #debug.overlayui.enable=0
 
