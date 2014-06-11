@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for inc.
 $(call inherit-product, device/hp/tenderloin/full_tenderloin.mk)
 
-# Inherit some common CyanogenMod stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit some common Omnirom stuff.
+$(call inherit-product, vendor/omni/config/common_tablet.mk) # add wifionly at some point...
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_tenderloin
+PRODUCT_NAME := omni_tenderloin
 PRODUCT_BRAND := HP
 PRODUCT_DEVICE := tenderloin
 PRODUCT_MODEL := Touchpad
@@ -26,5 +26,3 @@ PRODUCT_VERSION_DEVICE_SPECIFIC := p1
 # Boot animation
 TARGET_SCREEN_HEIGHT := 768
 TARGET_SCREEN_WIDTH := 1024
-
-TARGET_UNOFFICIAL_BUILD_ID := 3.4_kernel

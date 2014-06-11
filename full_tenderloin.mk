@@ -34,7 +34,7 @@ PRODUCT_COPY_FILES += \
     device/hp/tenderloin/fstab.tenderloin:root/fstab.tenderloin \
     device/hp/tenderloin/prebuilt/lvm/lvm.conf:root/lvm/lvm.conf \
     device/hp/tenderloin/makemulti.sh:makemulti.sh \
-    device/hp/tenderloin/prebuilt/boot/moboot.splash.CyanogenMod.tga:moboot.splash.CyanogenMod.tga \
+    device/hp/tenderloin/prebuilt/boot/moboot.splash.Omnirom.tga:moboot.splash.Omnirom.tga \
     device/hp/tenderloin/prebuilt/boot/moboot.default:moboot.default
 
 # Add touchcreen configuration file

@@ -111,13 +111,13 @@ def WriteFullOTAPackage(input_zip, output_zip):
   boot_img.close()
 
   script.Mount("/boot")
-  script.UnpackPackageFile("boot.img", "/boot/uImage.CyanogenMod")
+  script.UnpackPackageFile("boot.img", "/boot/uImage.Omnirom")
 
-  moboot_tga = open(OPTIONS.device_out + "/moboot.splash.CyanogenMod.tga")
-  common.ZipWriteStr(output_zip, "moboot.splash.CyanogenMod.tga", moboot_tga.read())
+  moboot_tga = open(OPTIONS.device_out + "/moboot.splash.Omnirom.tga")
+  common.ZipWriteStr(output_zip, "moboot.splash.Omnirom.tga", moboot_tga.read())
   moboot_tga.close()
 
-  script.UnpackPackageFile("moboot.splash.CyanogenMod.tga", "/boot/moboot.splash.CyanogenMod.tga")
+  script.UnpackPackageFile("moboot.splash.Omnirom.tga", "/boot/moboot.splash.Omnirom.tga")
 
   # -- tenderloin build change done
 
