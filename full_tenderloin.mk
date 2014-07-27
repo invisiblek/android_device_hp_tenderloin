@@ -156,6 +156,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.tenderloin \
+    audio.r_submix.default \
     tinymix \
     tinyplay \
     tinycap
