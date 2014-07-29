@@ -146,8 +146,15 @@ on boot
 
     # Enable low memory killer to check file pages
     write /sys/module/lowmemorykiller/parameters/minfree 8192,10240,12288,14336,16384,20480
+
+    # cpufreq
     write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 90
     write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 1
+    # cpu-boost
+    write /sys/module/cpu_boost/parameters/boost_ms 20
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1512000
+    write /sys/module/cpu_boost/parameters/sync_threshold 1512000
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1134000
 
     # Enable power collapse where always safe
     write /sys/module/pm_8x60/modes/cpu0/power_collapse/suspend_enabled 1
