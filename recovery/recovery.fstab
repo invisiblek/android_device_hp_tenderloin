@@ -1,4 +1,6 @@
 /dev/block/mmcblk0p13           /boot            ext3        defaults        defaults
 /dev/store/cm-system            /system          ext4        defaults        defaults
 /dev/store/cm-data              /data            ext4        defaults        defaults
+/dev/store/cm-data              /data            f2fs        defaults        defaults
 /dev/store/cm-cache             /cache           ext4        defaults        defaults
+/dev/store/cm-cache             /cache           f2fs        defaults        defaults
