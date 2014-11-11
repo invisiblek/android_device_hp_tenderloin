@@ -122,7 +122,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # This is a tablet.
 PRODUCT_CHARACTERISTICS := tablet
-PRODUCT_AAPT_CONFIG := xlarge mdpi hdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Bluetooth
