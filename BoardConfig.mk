@@ -139,10 +139,3 @@ BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
 
 # Multiboot stuff
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-        device/hp/tenderloin/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-        healthd.te
