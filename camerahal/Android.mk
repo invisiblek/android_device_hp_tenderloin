@@ -2,9 +2,6 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_C_INCLUDES := \
-    system/media/camera/include
-
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
@@ -37,6 +34,8 @@ else
 LOCAL_C_INCLUDES += $(TOP)/hardware/qcom/display/libgralloc \
                     $(TOP)/hardware/qcom/display/libgenlock
 endif
+
+LOCAL_C_INCLUDES += system/media/camera/include
 
 LOCAL_SHARED_LIBRARIES := libutils libui libcamera_client liblog libcutils
 LOCAL_SHARED_LIBRARIES += libgenlock libbinder libdl libhardware
