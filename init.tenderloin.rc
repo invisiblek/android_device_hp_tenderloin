@@ -8,6 +8,7 @@ on init
     mkdir /lvm
     restorecon_recursive /lvm
     start lvm
+    restorecon_recursive /dev/mapper/
 
     # remove moboot next boot indicator and remount /boot read-only
     mkdir /boot
@@ -45,6 +46,8 @@ on fs
     mount_all /fstab.tenderloin
 
     setprop ro.crypto.fuse_sdcard true
+
+    restorecon /data/.layout_version
 
     # sdcard service is sometimes too slow and can't create nodes properly
     start sdcard
@@ -215,11 +218,13 @@ service serial /sbin/serial
     class core
     disabled
     oneshot
+    seclabel u:r:serial:s0
 
 service lvm /sbin/lvm.static vgchange -ay
     class core
     disabled
     oneshot
+    seclabel u:r:lvm:s0
 
 on property:init.svc.bootanim=stopped
     start mpdecision

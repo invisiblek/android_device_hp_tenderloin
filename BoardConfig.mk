@@ -98,7 +98,7 @@ BOARD_OVERLAY_FORMAT_YCbCr_420_SP := true
 USE_CAMERA_STUB := false
 
 # tenderloin- these kernel settings are temporary to complete build
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom zcache androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom zcache
 BOARD_KERNEL_BASE := 0x40200000
 BOARD_PAGE_SIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := uImage
@@ -144,3 +144,16 @@ BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
 
 # Multiboot stuff
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
+
+# SELinux
+include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/hp/tenderloin/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bootanim.te \
+    file.te \
+    file_contexts \
+    lvm.te \
+    serial.te \
+    surfaceflinger.te \
+    sysinit.te
