@@ -41,7 +41,7 @@ ro.emmc = 1
 # bluetooth
 net.bt.name=Android
 
-persist.sys.usb.config=mtp
+persist.sys.usb.config=mtp,adb
 
 ro.input.noresample=1
 
