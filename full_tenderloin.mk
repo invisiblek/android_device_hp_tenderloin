@@ -182,7 +182,7 @@ PRODUCT_COPY_FILES += \
 # Sensors, misc
 PRODUCT_PACKAGES += \
     librs_jni \
-    wpa_supplicant.conf \
+    wpa_supplicant \
     libnetcmdiface \
     libmllite \
     libmlplatform \
