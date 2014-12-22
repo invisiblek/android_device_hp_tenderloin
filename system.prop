@@ -44,3 +44,6 @@ net.bt.name=Android
 persist.sys.usb.config=mtp
 
 ro.input.noresample=1
+
+# Use aweseomplayer rather than NuPlayer
+media.stagefright.use-awesome
