@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
     ts_srv_set \
     serial \
     com.android.future.usb.accessory \
-    rebootcmd
+    rebootcmd \
+    lvm.static
 
 PRODUCT_PACKAGES += \
     make_ext4fs \

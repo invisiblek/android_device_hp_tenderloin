@@ -5,29 +5,14 @@ on early-init
     start serial
 
 on init
-    # Enable LVM
+    mkdir /lvm
+    restorecon_recursive /lvm
+    start lvm
 
-    # We need to set LVM_SYSTEM_DIR for lvm to work and it does not work
-    # with embedded export command until too late, so we exploit
-    # the fact that there is /bin/sh on the 13th partition that we can use.
-
+    # remove moboot next boot indicator and remount /boot read-only
     mkdir /boot
-
     mount ext3 /dev/block/mmcblk0p13 /boot wait noatime barrier=1
-
-    # Unfortunately it's dynamically linked so we need to create this
-    # /lib symlink first and kill it later when no longer needed.
-    symlink /boot/lib /lib
-
-    # Also stupid lvm binary expects block devices to live in /dev,
-    # not /dev/block
-    symlink /dev/block/mmcblk0p14 /dev/mmcblk0p14
-    exec /boot/bin/sh -c "LVM_SYSTEM_DIR=/lvm /boot/usr/sbin/lvm.static vgchange -ay"
-
-    # remove all the lvm stuff as well as the moboot nextboot instruction
-    exec /system/xbin/rm -rf /dev/mmcblk0p14 /lib /boot/moboot.next /var
-
-    # remount /boot read-only
+    exec /system/xbin/rm -rf /boot/moboot.next
     mount ext3 /dev/block/mmcblk0p13 /boot remount ro wait noatime barrier=1
 
     # set up additional storage
@@ -56,7 +41,6 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
 
 on fs
-    on fs
     # mount partitions
     mount_all /fstab.tenderloin
 
@@ -228,6 +212,11 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     disabled
 
 service serial /sbin/serial
+    class core
+    disabled
+    oneshot
+
+service lvm /sbin/lvm.static vgchange -ay
     class core
     disabled
     oneshot
