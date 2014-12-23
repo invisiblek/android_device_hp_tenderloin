@@ -208,6 +208,7 @@ service tsdriver /system/bin/ts_srv
     class core
     user root
     critical
+    seclabel u:r:ts_srv:s0
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class core
