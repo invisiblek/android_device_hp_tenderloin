@@ -155,6 +155,7 @@ BOARD_SEPOLICY_UNION += \
     file.te \
     file_contexts \
     lvm.te \
+    mpdecision.te \
     serial.te \
     surfaceflinger.te \
     sysinit.te

@@ -230,6 +230,7 @@ service moboot-control /system/bin/moboot_control.sh
     class core
     disabled
     oneshot
+    seclabel u:r:vold:s0
 
 on property:init.svc.bootanim=stopped
     start mpdecision
