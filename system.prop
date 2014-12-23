@@ -16,7 +16,6 @@ debug.enabletr=false
 debug.egl.hw=1
 debug.egl.recordable.rgba8888=1
 debug.composition.type=dyn
-ro.config.low_ram=true
 
 #multi user support
 fw.max_users = 5
