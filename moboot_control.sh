@@ -6,16 +6,23 @@ DEFAULT_RECOVERY_CFG=/boot/android.default.recovery
 
 busybox mount /boot -o remount,rw
 
-case "$1" in
-	recovery)
+rebootmode=`getprop sys.shutdown.requested`
+
+case "$rebootmode" in
+	1recovery)
 		CMD="ClockworkMod"
 		if [ -r ${DEFAULT_RECOVERY_CFG} ];
 		then
 			CMD=`cat ${DEFAULT_RECOVERY_CFG}`
 		fi
+		break
 		;;
-	altos)
+	1altos)
 		CMD="webOS"
+		break
+		;;
+	1)	CMD="CyanogenMod"
+		break
 		;;
 	*)
 		CMD="$1"

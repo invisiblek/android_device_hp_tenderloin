@@ -146,9 +146,6 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
 
-# Multiboot stuff
-TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
-
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/hp/tenderloin/sepolicy

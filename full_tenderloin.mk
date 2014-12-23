@@ -194,7 +194,6 @@ PRODUCT_PACKAGES += \
     ts_srv_set \
     serial \
     com.android.future.usb.accessory \
-    rebootcmd \
     lvm.static
 
 PRODUCT_PACKAGES += \
