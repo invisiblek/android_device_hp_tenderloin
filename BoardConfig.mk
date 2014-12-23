@@ -157,7 +157,9 @@ BOARD_SEPOLICY_UNION += \
     bootanim.te \
     file.te \
     file_contexts \
+    init_shell.te \
     lvm.te \
+    mpdecision.te \
     serial.te \
     surfaceflinger.te \
     sysinit.te
