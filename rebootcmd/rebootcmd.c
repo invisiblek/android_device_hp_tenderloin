@@ -1,26 +1,19 @@
-#include <sys/types.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <cutils/properties.h>
 #include <android/log.h>
+#include "property_service.h"
 
 #define ALOGD(...) __android_log_print(ANDROID_LOG_DEBUG, "rebootcmd: ", __VA_ARGS__)
 
-int main(int argc, char**argv, char *envp[])
+int main(int argc, char**argv)
 {
-	if(strcmp(argv[1], "recovery") == 0){
-		//returns 1 if error
-		ALOGD("Rebooting into recovery");
-		system("/system/bin/moboot_control.sh recovery");
+	if (argc > 0) {
+		ALOGD("Rebooting into %s", argv[1]);
+		property_set("sys.tenderloin.reboot.target", argv[1]);
 	} else {
-		if(strcmp(argv[1], "altos") == 0){
-			//returns 1 if error
-			ALOGD("Rebooting into WebOS");
-			system("/system/bin/moboot_control.sh altos");
-		}
+		ALOGD("Rebooting normally");
+		property_set("sys.tenderloin.reboot.target", "normal");
 	}
 
-	//Needed to allow the script to write to /boot/moboot.next
-	sleep(1);
+	sleep(2);
 	return -1;
 }

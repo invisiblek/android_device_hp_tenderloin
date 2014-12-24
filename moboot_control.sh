@@ -2,15 +2,17 @@
 
 export PATH=/system/xbin:/system/bin
 
+DEFAULT_BOOT_CFG=/boot/moboot.default
 DEFAULT_RECOVERY_CFG=/boot/android.default.recovery
 
 busybox mount /boot -o remount,rw
 
-case "$1" in
+rebootmode=`getprop sys.tenderloin.reboot.target`
+
+case "$rebootmode" in
 	recovery)
 		CMD="ClockworkMod"
-		if [ -r ${DEFAULT_RECOVERY_CFG} ];
-		then
+		if [ -r ${DEFAULT_RECOVERY_CFG} ]; then
 			CMD=`cat ${DEFAULT_RECOVERY_CFG}`
 		fi
 		;;
@@ -18,7 +20,10 @@ case "$1" in
 		CMD="webOS"
 		;;
 	*)
-		CMD="$1"
+		CMD="CyanogenMod"
+		if [ -r ${DEFAULT_BOOT_CFG} ]; then
+			CMD=`cat ${DEFAULT_BOOT_CFG}`
+		fi
 		;;
 esac
 

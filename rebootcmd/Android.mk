@@ -5,12 +5,12 @@ include $(CLEAR_VARS)
 ## reboot command
 #
 #
-LOCAL_SRC_FILES:= \
-	rebootcmd.c
-LOCAL_CFLAGS:= -g -c -W -Wall -O2 -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp -funsafe-math-optimizations -D_POSIX_SOURCE
-LOCAL_MODULE:=rebootcmd
-LOCAL_SHARED_LIBRARIES := \
-	libcutils \
-	liblog
+LOCAL_SRC_FILES := rebootcmd.c
+LOCAL_MODULE := rebootcmd
+LOCAL_C_INCLUDES := system/core/init
+LOCAL_CFLAGS:= -Wall
 LOCAL_MODULE_TAGS:= eng
+LOCAL_SHARED_LIBRARIES := \
+    libcutils \
+    liblog
 include $(BUILD_EXECUTABLE)
