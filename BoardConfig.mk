@@ -157,10 +157,14 @@ BOARD_SEPOLICY_UNION += \
     bootanim.te \
     file.te \
     file_contexts \
+    init.te \
     init_shell.te \
+    kernel.te \
     lvm.te \
     mpdecision.te \
     serial.te \
     surfaceflinger.te \
     sysinit.te \
-    ts_srv.te
+    system_server.te \
+    ts_srv.te \
+    ueventd.te

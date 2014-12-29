@@ -8,7 +8,6 @@ on init
     mkdir /lvm
     restorecon_recursive /lvm
     start lvm
-    restorecon_recursive /dev/mapper/
 
     # remove moboot next boot indicator and remount /boot read-only
     mkdir /boot
@@ -48,6 +47,7 @@ on fs
     setprop ro.crypto.fuse_sdcard true
 
     restorecon /data/.layout_version
+    restorecon_recursive /dev/mapper/
 
     # sdcard service is sometimes too slow and can't create nodes properly
     start sdcard
