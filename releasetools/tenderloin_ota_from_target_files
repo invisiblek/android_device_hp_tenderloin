@@ -249,6 +249,10 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   common.ZipWriteStr(output_zip, "moboot.splash.CyanogenMod.tga", moboot_tga.read())
   moboot_tga.close()
 
+  tptoolbox_cfg = open(OPTIONS.device_out + "/tptoolbox.cfg")
+  common.ZipWriteStr(output_zip, "tptoolbox.cfg", tptoolbox_cfg.read())
+  tptoolbox_cfg.close()
+
   script.UnpackPackageFile("moboot.splash.CyanogenMod.tga", "/boot/moboot.splash.CyanogenMod.tga")
   ######## tenderloin build change done ########
 
