@@ -45,3 +45,6 @@ persist.sys.usb.config=mtp,adb
 ro.input.noresample=1
 
 media.stagefright.use-awesome=true
+# MDP
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.idletime=-1
