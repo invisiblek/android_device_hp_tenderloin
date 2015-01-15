@@ -44,4 +44,4 @@ persist.sys.usb.config=mtp,adb
 
 ro.input.noresample=1
 
-persist.sys.media.use-awesome=true
+media.stagefright.use-awesome=true
