@@ -233,6 +233,14 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   boot_img.close()
 
   script.Mount("/boot")
+
+  # Delete other uImage traces.
+  um = ["/boot/uImage.CyanogenMod", "/boot/moboot.splash.CyanogenMod.tga", "/boot/uImage.ICS",
+        "/boot/moboot.splash.ICS.tga", "/boot/uImage.AOKP", "/boot/moboot.splash.AOKP.tga",
+        "/boot/uImage.Classicnerd", "/boot/moboot.splash.Classicnerd", "/boot/uImage.Evervolv",
+        "/boot/uImage.splash.Evervolv.tga"]
+  script.DeleteFiles(um)
+
   script.UnpackPackageFile("boot.img", "/boot/uImage.CyanogenMod")
 
   moboot_tga = open(OPTIONS.device_out + "/moboot.splash.CyanogenMod.tga")
