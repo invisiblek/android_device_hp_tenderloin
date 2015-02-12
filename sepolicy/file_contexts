@@ -5,7 +5,6 @@
 /dev/lm8502		u:object_r:sensors_device:s0
 
 /dev/block/zram0	u:object_r:ram_device:s0
-/lvm(/.*)?		u:object_r:lvm_file:s0
 
 /dev/kgsl-2d(.*)	u:object_r:gpu_device:s0
 

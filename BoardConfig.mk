@@ -160,7 +160,6 @@ BOARD_SEPOLICY_UNION += \
     init.te \
     init_shell.te \
     kernel.te \
-    lvm.te \
     mpdecision.te \
     serial.te \
     surfaceflinger.te \

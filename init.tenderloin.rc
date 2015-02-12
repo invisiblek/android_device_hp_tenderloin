@@ -224,7 +224,7 @@ service lvm /sbin/lvm.static vgchange -ay
     class core
     disabled
     oneshot
-    seclabel u:r:lvm:s0
+    seclabel u:r:recovery:s0
 
 on property:init.svc.bootanim=stopped
     start mpdecision
