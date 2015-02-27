@@ -45,7 +45,7 @@ on fs
     mount_all /fstab.tenderloin
 
     # Enable zRAM
-    swapon_all /fstab.qcom
+    swapon_all /fstab.tenderloin
 
     setprop ro.crypto.fuse_sdcard true
 
