@@ -22,11 +22,6 @@ fw.max_users = 5
 
 com.qc.hardware=true
 
-#c2d
-debug.composition.type=c2d
-#ro.sf.compbypass.enable=1
-#debug.overlayui.enable=0
-
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
 ro.opengles.version = 131072
