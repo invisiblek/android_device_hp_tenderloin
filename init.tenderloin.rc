@@ -63,6 +63,10 @@ on post-fs-data
     mkdir /data/misc/camera 0770 media system
     mkdir /data/misc/camera/R5_MVEN003_LD2_ND0_IR0_SH0_FL1_SVEN003_DCCID1044 0770 media media
 
+    # PCC
+    chown system system /sys/devices/virtual/graphics/fb0/rgb
+    chmod 0660 /sys/devices/virtual/graphics/fb0/rgb
+
     # camera config
     exec /system/bin/touch /data/misc/camera/config.txt
     chown media system /data/misc/camera/config.txt
