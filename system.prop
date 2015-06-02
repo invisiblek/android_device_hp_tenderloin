@@ -32,9 +32,6 @@ ro.emmc = 1
 # bluetooth
 net.bt.name=Android
 
-persist.service.adb.enable=1
-persist.sys.usb.config=mtp,adb
-
 ro.input.noresample=1
 
 ro.radio.noril=1
