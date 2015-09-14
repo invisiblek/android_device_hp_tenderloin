@@ -209,6 +209,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.dex2oat-flags=--no-watch-dog \
+    dalvik.vm.dex2oat-filter=interpret-only \
+    dalvik.vm.image-dex2oat-filter=speed \
     debug.hwc.dynThreshold=1.9
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
