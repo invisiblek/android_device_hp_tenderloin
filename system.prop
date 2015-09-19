@@ -39,3 +39,5 @@ persist.sys.isUsbOtgEnabled=true
 persist.sys.usb.config=mtp,adb
 
 ro.input.noresample=1
+
+ro.radio.noril=1
