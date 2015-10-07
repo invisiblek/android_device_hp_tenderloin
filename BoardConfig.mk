@@ -149,18 +149,3 @@ TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += device/hp/tenderloin/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    bootanim.te \
-    file.te \
-    file_contexts \
-    init.te \
-    init_shell.te \
-    kernel.te \
-    mpdecision.te \
-    serial.te \
-    surfaceflinger.te \
-    sysinit.te \
-    system_server.te \
-    ts_srv.te \
-    ueventd.te
