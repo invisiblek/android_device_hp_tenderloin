@@ -15,6 +15,7 @@
  */
 
 #include <string.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <fcntl.h>
 #include <sys/mount.h>
