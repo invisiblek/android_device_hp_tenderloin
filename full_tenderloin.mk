@@ -157,8 +157,8 @@ PRODUCT_PACKAGES += \
     libdashplayer
 
 # Camera
-PRODUCT_PACKAGES += \
-    camera.msm8660
+#PRODUCT_PACKAGES += \
+#    camera.msm8660
 
 # Audio
 PRODUCT_PACKAGES += \
