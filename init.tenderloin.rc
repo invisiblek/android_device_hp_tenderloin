@@ -174,7 +174,6 @@ service tsdriver /system/bin/ts_srv
     class core
     user root
     critical
-    seclabel u:r:ts_srv:s0
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     class core
@@ -185,13 +184,11 @@ service serial /sbin/serial
     class core
     disabled
     oneshot
-    seclabel u:r:serial:s0
 
 service lvm /sbin/lvm.static vgchange -ay
     class core
     disabled
     oneshot
-    seclabel u:r:recovery:s0
 
 on property:init.svc.bootanim=stopped
     start mpdecision
