@@ -79,9 +79,6 @@ TARGET_NO_ADAPTIVE_PLAYBACK := true
 # PowerHAL
 TARGET_POWERHAL_VARIANT := cm
 
-# Sensors
-TARGET_INVENSENSE_SENSOR := 60xx
-
 # Webkit workaround
 TARGET_FORCE_CPU_UPLOAD := true
 

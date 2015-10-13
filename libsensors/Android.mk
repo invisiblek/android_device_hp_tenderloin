@@ -40,13 +40,13 @@ LOCAL_SRC_FILES := \
 
 LOCAL_CFLAGS += -DCONFIG_MPU_SENSORS_MPU3050=1
 
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/platform/include
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/platform/include/linux
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/platform/linux
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/mllite
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/mldmp
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/external/aichi
-LOCAL_C_INCLUDES += hardware/invensense/60xx/mlsdk/external/akmd
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/platform/include
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/platform/include/linux
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/platform/linux
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/mllite
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/mldmp
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/external/aichi
+LOCAL_C_INCLUDES += device/hp/tenderloin/mlsdk/external/akmd
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libutils libdl libmllite libmlplatform
 LOCAL_CPPFLAGS+=-DLINUX=1
