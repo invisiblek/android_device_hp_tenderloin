@@ -188,7 +188,7 @@
             32 - Camera
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">1</integer>
+    <!--integer name="config_deviceHardwareKeys">1</integer-->
 
     <!-- Disable lockscreen translucent decor by default -->
     <bool name="config_enableLockScreenTranslucentDecor">true</bool>
@@ -198,8 +198,8 @@
     <dimen name="config_viewConfigurationTouchSlop">4dp</dimen>
 
     <!-- Performance profiles -->
-    <string name="config_perf_profile_prop">sys.perf.profile</string>
-    <string name="config_perf_profile_default_entry">1</string>
+    <!--string name="config_perf_profile_prop">sys.perf.profile</string-->
+    <!--string name="config_perf_profile_default_entry">1</string-->
 
     <!-- Device configuration setting the minfree tunable in the lowmemorykiller in the
          kernel. A high value will cause the lowmemorykiller to fire earlier, keeping more
