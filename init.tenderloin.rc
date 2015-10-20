@@ -5,6 +5,8 @@ on early-init
     start serial
 
 on init
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
+
     mkdir /lvm
     restorecon_recursive /lvm
     start lvm
