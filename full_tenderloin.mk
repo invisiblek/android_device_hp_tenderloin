@@ -169,6 +169,9 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.tenderloin \
     audio.r_submix.default \
+    libsrec_jni \
+    libavextensions \
+    libavmediaextentions \
     tinymix \
     tinyplay \
     tinycap
