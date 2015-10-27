@@ -206,6 +206,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     setup_fs
 
+PRODUCT_COPY_FILES += \
+    device/hp/tenderloin/releasetools/install-recovery.sh:$(PRODUCT_OUT)/ota_temp/SYSTEM/bin/install-recovery.sh
+
 # Property overrides.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160 \
