@@ -199,7 +199,8 @@ PRODUCT_PACKAGES += \
     serial \
     com.android.future.usb.accessory \
     rebootcmd \
-    lvm.static
+    lvm.static \
+    libstlport
 
 PRODUCT_PACKAGES += \
     make_ext4fs \
