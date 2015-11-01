@@ -198,8 +198,8 @@
     <dimen name="config_viewConfigurationTouchSlop">4dp</dimen>
 
     <!-- Performance profiles -->
-    <!--string name="config_perf_profile_prop">sys.perf.profile</string-->
-    <!--string name="config_perf_profile_default_entry">1</string-->
+    <string name="config_perf_profile_prop">sys.perf.profile</string>
+    <string name="config_perf_profile_default_entry">1</string>
 
     <!-- Device configuration setting the minfree tunable in the lowmemorykiller in the
          kernel. A high value will cause the lowmemorykiller to fire earlier, keeping more
