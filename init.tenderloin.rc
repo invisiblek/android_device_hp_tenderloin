@@ -183,7 +183,7 @@ service tsdriver /system/bin/ts_srv
     user root
     critical
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+service mpdecision /system/bin/mpdecision --avg_comp
     class late_start
     user root
     group system
