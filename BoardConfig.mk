@@ -28,7 +28,7 @@ TARGET_HAVE_TSLIB := false
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
-TARGET_RECOVERY_FSTAB := device/hp/tenderloin/fstab.tenderloin
+TARGET_RECOVERY_FSTAB := device/hp/tenderloin/fstab.twrp
 RECOVERY_FSTAB_VERSION := 2
 TARGET_NO_RECOVERY_PATCH := true
 
@@ -115,7 +115,7 @@ TARGET_PREBUILT_KERNEL := device/hp/tenderloin/prebuilt/boot/kernel
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/hp/tenderloin
-TARGET_KERNEL_CONFIG := cyanogenmod_tenderloin_defconfig
+TARGET_KERNEL_CONFIG := tenderloin_recovery_defconfig
 
 TARGET_RECOVERY_INITRC := device/hp/tenderloin/recovery/init.rc
 BOARD_HAS_NO_SELECT_BUTTON := false
@@ -141,3 +141,20 @@ BOARD_CUSTOM_BOOTIMG_MK := device/hp/tenderloin/uboot-bootimg.mk
 
 # Multiboot stuff
 TARGET_RECOVERY_PRE_COMMAND := "/system/bin/rebootcmd"
+
+# Twrp
+TARGET_RECOVERY_DEVICE_DIRS := device/hp/tenderloin-common
+DEVICE_RESOLUTION = 1024x768
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_SCREEN_BLANK := true
+TW_NO_REBOOT_BOOTLOADER := true
+HAVE_SELINUX := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+TW_WHITELIST_INPUT := "HPTouchpad"
+TW_NO_CPU_TEMP := true

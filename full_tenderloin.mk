@@ -31,7 +31,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/hp/tenderloin/prebuilt/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/hp/tenderloin/fstab.tenderloin:root/fstab.tenderloin \
     device/hp/tenderloin/prebuilt/lvm/lvm.conf:root/lvm/lvm.conf \
     device/hp/tenderloin/makemulti.sh:makemulti.sh \
     device/hp/tenderloin/prebuilt/boot/moboot.splash.CyanogenMod.tga:moboot.splash.CyanogenMod.tga \
