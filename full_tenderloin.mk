@@ -199,15 +199,9 @@ PRODUCT_PACKAGES += \
     ts_srv \
     ts_srv_set \
     serial \
-    com.android.future.usb.accessory \
     rebootcmd \
     lvm.static \
     libstlport
-
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    e2fsck \
-    setup_fs
 
 PRODUCT_COPY_FILES += \
     device/hp/tenderloin/releasetools/install-recovery.sh:$(PRODUCT_OUT)/ota_temp/SYSTEM/bin/install-recovery.sh
