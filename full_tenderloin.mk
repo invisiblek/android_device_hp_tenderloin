@@ -157,8 +157,7 @@ PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxEvrcEnc \
-    libOmxQcelp13Enc \
-    libdashplayer
+    libOmxQcelp13Enc
 
 # Camera
 #PRODUCT_PACKAGES += \
