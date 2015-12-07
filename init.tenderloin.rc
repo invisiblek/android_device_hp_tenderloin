@@ -79,6 +79,9 @@ on boot
     chown system system /sys/devices/i2c-3/3-0033/vibrator/vib0/vib_enable
     chown system system /sys/devices/i2c-3/3-0033/vibrator/vib0/vib_duty_cycle
 
+    #set low voltage point
+    write /sys/devices/i2c-3/3-0031/volt_low 3300000
+
     # For TS control
     chown system system /sys/devices/platform/cy8ctma395/vdd
     chown system system /sys/devices/platform/cy8ctma395/xres
