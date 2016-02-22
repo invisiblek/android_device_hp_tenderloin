@@ -6,11 +6,10 @@ on early-init
 
 on init
     # Enable LVM
+
     # We need to set LVM_SYSTEM_DIR for lvm to work and it does not work
     # with embedded export command until too late, so we exploit
     # the fact that there is /bin/sh on the 13th partition that we can use.
-
-    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
 
     mkdir /boot
 
