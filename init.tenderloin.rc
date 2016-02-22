@@ -161,6 +161,10 @@ on boot
     # allow Q6 bites to restart LPASS(Q6/audio) subsystem
     write /sys/module/subsystem_restart/parameters/restart_level 3
 
+    # compat-wireless modules needed for ath6kl
+    insmod /system/lib/modules/compat.ko
+    insmod /system/lib/modules/cfg80211.ko
+
     # change permissions for i2c-2 device
     chmod 0660 /dev/i2c-2
     chown media media /dev/i2c-2
