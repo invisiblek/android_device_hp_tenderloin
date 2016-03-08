@@ -1,13 +1,13 @@
 # Inherit AOSP device configuration for inc.
 $(call inherit-product, device/hp/tenderloin/full_tenderloin.mk)
 
-# Inherit some common CyanogenMod stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit some common Carbon stuff.
+$(call inherit-product, vendor/carbon/config/common_tablet.mk)
 
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_tenderloin
+PRODUCT_NAME := carbon_tenderloin
 PRODUCT_BRAND := HP
 PRODUCT_DEVICE := tenderloin
 PRODUCT_MODEL := Touchpad
