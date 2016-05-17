@@ -25,18 +25,10 @@ $(call inherit-product-if-exists, vendor/hp/tenderloin/tenderloin-vendor.mk)
 # common tenderloin configs
 $(call inherit-product, device/hp/tenderloin-common/tenderloin-common.mk)
 
-# This is the hardware-specific overlay, which points to the location
-# of hardware-specific resource overrides, typically the frameworks and
-# application settings that are stored in resourced.
-PRODUCT_COPY_FILES += \
-    device/hp/tenderloin/init.tenderloin.rc:root/init.tenderloin.rc
-
 DEVICE_PACKAGE_OVERLAYS += device/hp/tenderloin/overlay
 
 # Custom init files.
 PRODUCT_COPY_FILES += \
-    device/hp/tenderloin/init.tenderloin.usb.rc:root/init.tenderloin.usb.rc \
-    device/hp/tenderloin/ueventd.tenderloin.rc:root/ueventd.tenderloin.rc \
     device/hp/tenderloin/prebuilt/boot/moboot.splash.Evervolv.tga:moboot.splash.Evervolv.tga \
     device/hp/tenderloin/prebuilt/boot/moboot.default:moboot.default
 
