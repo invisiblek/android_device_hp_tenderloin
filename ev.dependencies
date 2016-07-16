@@ -1,7 +1,0 @@
-[
- {
-    "repository": "android_device_hp_tenderloin-common",
-    "target_path": "device/hp/tenderloin-common",
-    "dep_type": "device"
- }
-]
