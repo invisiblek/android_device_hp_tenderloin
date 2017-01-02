@@ -7,7 +7,7 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 #
 # Setup device specific product configuration.
 #
-PRODUCT_NAME := cm_tenderloin
+PRODUCT_NAME := lineage_tenderloin
 PRODUCT_BRAND := HP
 PRODUCT_DEVICE := tenderloin
 PRODUCT_MODEL := Touchpad

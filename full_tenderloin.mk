@@ -27,12 +27,6 @@ $(call inherit-product, device/hp/tenderloin-common/tenderloin-common.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/hp/tenderloin/overlay
 
-# Custom init files.
-PRODUCT_COPY_FILES += \
-    device/hp/tenderloin/prebuilt/boot/moboot.splash.CyanogenMod.tga:moboot.splash.CyanogenMod.tga \
-    device/hp/tenderloin/prebuilt/boot/moboot.default:moboot.default
-
-
 PRODUCT_COPY_FILES += \
     device/hp/tenderloin/makemulti.sh:makemulti.sh \
 
